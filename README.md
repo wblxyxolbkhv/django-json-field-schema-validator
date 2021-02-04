@@ -2,10 +2,6 @@
 
 Tiny tool for Django JSONField validation through [JSON Schema](https://python-jsonschema.readthedocs.io/en/latest/validate/)
 
-## Installation
-```shell script
-pip install django-json-schema-validator
-```
 ## Example
 
 ```python
