@@ -1,7 +1,7 @@
 import pytest
 from django.core.exceptions import ValidationError
 
-from django_json_schema_validator.validators import JSONFieldSchemaValidator
+from django_json_field_schema_validator.validators import JSONFieldSchemaValidator
 
 
 @pytest.mark.parametrize('draft_version', (3, 4, 6,  7))
