@@ -1,7 +1,13 @@
-# django-json-schema-validator
-[![Build Status](https://travis-ci.org/wblxyxolbkhv/django-json-schema-validator.svg?branch=main)](https://travis-ci.org/wblxyxolbkhv/django-json-schema-validator)
+# django-json-field-schema-validator
+[![Build Status](https://travis-ci.com/wblxyxolbkhv/django-json-schema-validator.svg?branch=main)](https://travis-ci.com/wblxyxolbkhv/django-json-schema-validator)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 Tiny tool for Django JSONField validation through [JSON Schema](https://python-jsonschema.readthedocs.io/en/latest/validate/)
+## Installation
+
+```shell script
+pip install django-json-field-schema-validator
+```
 
 ## Example
 
