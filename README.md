@@ -26,7 +26,7 @@ schema = {
     'required': ['foo', 'bar']
 }
 
-class SomeMode(models.Model):
+class SomeModel(models.Model):
     some_field = models.JSONField(validators=[JSONFieldSchemaValidator(schema)])
 
 ```

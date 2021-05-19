@@ -2,8 +2,10 @@ from typing import List, Iterable
 
 from django.core.exceptions import ValidationError
 import jsonschema
+from django.utils.deconstruct import deconstructible
 
 
+@deconstructible
 class JSONFieldSchemaValidator:
     def __init__(self, schema: dict, draft_version=7):
         self.schema = schema
@@ -29,6 +31,11 @@ class JSONFieldSchemaValidator:
             raise ValidationError(django_errors)
 
         return value
+
+    def __eq__(self, other):
+        if not hasattr(other, 'deconstruct'):
+            return False
+        return self.deconstruct() == other.deconstruct()
 
     def _extract_errors(
         self,
