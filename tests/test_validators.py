@@ -69,3 +69,14 @@ def test_deconstruct():
     restored_validator = klass(*args, **kwargs)
 
     assert restored_validator == validator
+
+
+def test_equality_other_object():
+    schema = {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {"id": {"type": "number"}, "name": {"type": "string"}},
+        "required": ["id", "name"],
+    }
+    validator = JSONFieldSchemaValidator(schema)
+    assert validator != object()
